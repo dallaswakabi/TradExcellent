@@ -5,7 +5,7 @@ const requireAuth = (req,res,next) =>{
 
     // check json web token exists & is verify
      if(token){
-         jwt.verify(token,'Tradexcellent',(err,decodedToken) =>{
+         jwt.verify(token,process.env.TOKEN_SECRET,(err,decodedToken) =>{
              if(err){
                  console.log(err.message);
                  res.redirect('/login');

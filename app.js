@@ -99,7 +99,7 @@ app.get('/add-user',requireAuth,(req,res)=>{
    })
 app.get('/user1',requireAuth,(req,res)=>{
        const token = req.cookies.jwt;
-       const user =  jwt.verify(token,'Tradexcellent')
+       const user =  jwt.verify(token,)
        const email = user.email;
     
        User.find({email},function(err,data){
@@ -111,7 +111,7 @@ app.get('/user1',requireAuth,(req,res)=>{
    })
 app.get('/user2',requireAuth,(req,res)=>{
        const token = req.cookies.jwt;
-       const user =  jwt.verify(token,'Tradexcellent')
+       const user =  jwt.verify(token,process.env.TOKEN_SECRET)
        const email = user.email;
     
        User.find({email},function(err,data){
@@ -123,7 +123,7 @@ app.get('/user2',requireAuth,(req,res)=>{
    })
 app.get('/user3',requireAuth,(req,res)=>{
        const token = req.cookies.jwt;
-       const user =  jwt.verify(token,'Tradexcellent')
+       const user =  jwt.verify(token,process.env.TOKEN_SECRET)
        const email = user.email;
     
        User.find({email},function(err,data){
@@ -191,7 +191,7 @@ app.get('/view',requireAuth,(req,res)=>{
    })
    app.get('/depo1',requireAuth,(req,res)=>{
        const token = req.cookies.jwt;
-       const user =  jwt.verify(token,'Tradexcellent')
+       const user =  jwt.verify(token,process.env.TOKEN_SECRET)
        const email = user.email;
    
        wallets.find({},function(err,doc){
@@ -206,7 +206,7 @@ app.get('/view',requireAuth,(req,res)=>{
    })
  app.get('/deposit',requireAuth,(req,res)=>{
        const token = req.cookies.jwt;
-    const user =  jwt.verify(token,'Tradexcellent')
+    const user =  jwt.verify(token,process.env.TOKEN_SECRET)
     const email = user.email;
 
     wallets.find({},function(err,doc){
@@ -221,7 +221,7 @@ app.get('/view',requireAuth,(req,res)=>{
  })
 app.get('/dashboard',requireAuth,(req,res)=>{
        const token = req.cookies.jwt;
-      const user =  jwt.verify(token,'Tradexcellent')
+      const user =  jwt.verify(token,process.env.TOKEN_SECRET)
       const email = user.email;
    
       User.find({email},function(err,data){

@@ -7,7 +7,7 @@ const  mongodb= require("mongodb");
 const jwt = require('jsonwebtoken');
 const axios = require('axios');
 const { constant } = require('lodash');
-const secret = 'Tradexcellent';
+
 //handle errors
    const handleErrors = (err) =>{
        console.log(err.message, err.code);
@@ -41,7 +41,7 @@ const secret = 'Tradexcellent';
 
 const maxAge = 60*60;
 const createToken = (email) =>{
-    return jwt.sign({email},'Tradexcellent',{
+    return jwt.sign({email},process.env.TOKEN_SECRET,{
       expiresIn : maxAge
     });
 }
@@ -194,7 +194,7 @@ module.exports.bonus_get= (req,res) =>{
 }
 module.exports.withdraw_get= (req,res) =>{
      const token = req.cookies.jwt;
-     const user =  jwt.verify(token,'Tradexcellent')
+     const user =  jwt.verify(token,process.env.TOKEN_SECRET)
      const email = user.email;
   
      User.find({email},function(err,data){
