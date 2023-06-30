@@ -1,0 +1,607 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:#141414;
+    width: 100%;
+    height: 100vh;
+}
+.navbar{
+   background-color:#141414;
+   box-shadow: 2px 2px 20px 0 rgba(255, 254, 254, 0.4);
+   position: relative;
+   height: 60px;
+}
+.navbar img{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+.sidebar{
+  float: left;
+  width: 250px;
+  height: 1100px; /* only for demonstration, should be removed */
+  background: #141414;
+  box-shadow: 2px 2px 20px 0 rgba(255, 254, 254, 0.4);
+  
+}
+.sidebar ul{
+    list-style: none;
+}
+.sidebar li{
+    margin-top: 30px;
+    cursor: pointer;
+    
+    font-size: 16px;
+    text-transform: capitalize;
+    padding-left:40px;
+}
+.sidebar a{
+    list-style: none;
+    text-decoration: none;
+    color: #e0dbdb;
+}
+.title-dash{
+    margin-top: 20px;
+    
+}
+.title-dash h2:nth-child(1){
+    text-transform: capitalize;
+    line-height: 2px;
+    letter-spacing: 2px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    
+}
+.side-center{
+    float: left;
+    padding: 20px;
+    width: 81%;
+    background-color: #222222;
+    height:1100px; /* only for demonstration, should be removed */
+    
+    
+  }
+  
+  section::after {
+      content: "";
+      display: table;
+      clear: both;
+  }  
+  .dash{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
+   margin-top: 40px;
+  }
+  .total-earn{
+      background-color: rgb(2, 2, 2);
+      width: 20%;
+      height: 84px;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 2px 2px 20px 0 rgba(112, 109, 109, 0.40);
+  }
+  .total-earn p:nth-child(1){
+      color: rgb(255, 255, 255);
+      text-transform: capitalize;
+      font-size: 16px;
+      font-weight: bold;
+  }
+  .total-earn p:nth-child(2){
+      text-transform: capitalize;
+      color: #b99806;
+      font-size: 16px;
+      font-weight: bold;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  .referal-earnings{
+      background-color:rgb(3, 51, 95);
+      width: 20%;
+      height: 84px;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 2px 2px 20px 0 rgba(112, 109, 109, 0.40);
+  }
+  .referal-earnings p:nth-child(1){
+      color:rgb(255, 255, 255);
+      text-transform: capitalize;
+      font-size: 16px;
+      font-weight: bold;
+  }
+  .referal-earnings p:nth-child(2){
+    text-transform: capitalize;
+    color: #b99806;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  .total-withdraw{
+      background-color: rgb(255, 255, 255);
+      width: 20%;
+      height: 84px;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 2px 2px 20px 0 rgba(112, 109, 109, 0.40);
+  }
+  .total-withdraw p:nth-child(1){
+      color:rgb(9, 140, 201);
+      text-transform: capitalize;
+      font-size: 16px;
+      font-weight: bold;
+  }
+  .total-deposit{
+      background-color: rgb(0, 0, 0);
+      width: 20%;
+      height: 84px;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 2px 2px 20px 0 rgba(112, 109, 109, 0.40);
+  }
+  .total-deposit p:nth-child(1){
+      color:rgb(255, 255, 255);
+      text-transform: capitalize;
+      font-size: 16px;
+      font-weight: bold;
+  }
+  .total-deposit p:nth-child(2){
+    text-transform: capitalize;
+    color: #b99806;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+  
+  .tradingview-widget-container{
+      margin-top: 70px;
+  }
+  #myBtn1 {
+    margin-top: 50px;
+    text-align: center;
+    background-color: rgb(4, 118, 133);
+    width: 123%;
+    height: 64px;
+    padding: 20px;
+    border-radius: 10px;
+    margin-left: 25%;
+    cursor: pointer;
+    list-style: none;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: capitalize;
+    display: inline;
+}
+
+/* withdraw button */
+
+  #btn-withdraw{
+    margin-top: 50px;
+    text-align: center;
+    background-color: rgb(4, 118, 133);
+    width: 123%;
+    height: 64px;
+    padding: 20px;
+    border-radius: 10px;
+    margin-left: 25%;
+    cursor: pointer;
+    list-style: none;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: capitalize;
+    display: inline;
+}
+.btn-space{
+    display: inline-block;
+    margin-left: 230px;
+}
+.center{
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+    border:2px solid rgb(238, 232, 232);
+    height: 50px;
+    width: 98%;
+    margin-left: 10px;
+    padding-left:0px;
+}
+
+footer{
+    text-align: center;
+    text-transform: capitalize;
+    padding-top: 50px;
+    font-size: 12px;
+    color: #4b4949;
+    padding-bottom: 10px;
+    background-color: rgb(0, 0, 0);
+}
+@media only screen and (max-width: 600px) and (min-width: 300px)  {
+    body{
+        background-color: black;
+        width: 100%;
+	    height: 100vh;
+    }
+    .sidebar{
+        width: 40%;
+        background: #141414;
+       box-shadow: 2px 2px 20px 0 rgba(255, 254, 254, 0.4);
+    }
+    .side-center{
+        float: left;
+        padding: 20px;
+        width: 60%;
+        background-color: #222222;
+        height:1300px; /* only for demonstration, should be removed */
+        
+        
+      }
+      
+      .dash{
+          width:100%;
+          margin-left: 15px;
+          display: inline-block;
+      }
+      .total-earn{
+        background-color: rgb(2, 2, 2);
+        width: 100%;
+        height: 84px;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 20px 0 rgba(112, 109, 109, 0.40);
+        margin-bottom: 10px;
+    }
+    section::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    .total-earn p:nth-child(1){
+        color: rgb(255, 255, 255);
+        text-transform: capitalize;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .total-earn p:nth-child(2){
+        text-transform: capitalize;
+        color: #b99806;
+        font-size: 16px;
+        font-weight: bold;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .referal-earnings{
+        background-color:rgb(3, 51, 95);
+        width: 100%;
+        height: 84px;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 20px 0 rgba(112, 109, 109, 0.40);
+        margin-bottom: 10px;
+    }
+    .referal-earnings p:nth-child(1){
+        color:rgb(255, 255, 255);
+        text-transform: capitalize;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .referal-earnings p:nth-child(2){
+      text-transform: capitalize;
+      color: #b99806;
+      font-size: 16px;
+      font-weight: bold;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .total-withdraw{
+        background-color: rgb(255, 255, 255);
+        width: 100%;
+        height: 84px;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 20px 0 rgba(112, 109, 109, 0.40);
+        margin-bottom: 10px;
+    }
+    .total-withdraw p:nth-child(1){
+        color:rgb(9, 140, 201);
+        text-transform: capitalize;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .total-deposit{
+        background-color: rgb(0, 0, 0);
+        width: 100%;
+        height: 84px;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 20px 0 rgba(112, 109, 109, 0.40);
+        margin-bottom: 10px;
+    }
+    .total-deposit p:nth-child(1){
+        color:rgb(255, 255, 255);
+        text-transform: capitalize;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .total-deposit p:nth-child(2){
+      text-transform: capitalize;
+      color: #b99806;
+      font-size: 16px;
+      font-weight: bold;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+    
+    .tradingview-widget-container{
+        margin-top: 80px;
+        width: 100%;
+        overflow: hidden;
+        height:40%;
+    }
+    .tabledash{
+        width: 100%;
+        margin-left:5px;
+        overflow: hidden;
+    }
+    .styled-table{
+    margin-left:2px;
+    width: 50%;
+    }
+    #myBtn1 {
+        margin-top: 50px;
+        text-align: center;
+        background-color: rgb(4, 118, 133);
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        border-radius: 10px;
+        margin-left: 25px;
+        cursor: pointer;
+        list-style: none;
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+        font-size: 16px;
+        text-transform: capitalize;
+        display: inline;
+    }
+    
+    /* withdraw button */
+    
+      #btn-withdraw{
+        margin-top: 50px;
+        text-align: center;
+        background-color: rgb(4, 118, 133);
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        border-radius: 10px;
+        margin-left: 25px;
+        cursor: pointer;
+        list-style: none;
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+        font-size: 16px;
+        text-transform: capitalize;
+        display: inline;
+    }
+    .btn-space{
+        display: inline-block;
+        margin-left: 50px;
+    }
+    .center{
+        display: flex;
+        flex-direction: row;
+        margin-top: 40px;
+        border:2px solid rgb(238, 232, 232);
+        height: 100px;
+        width: 100%;
+        margin-left: 10px;
+        padding-left:0px;
+    }
+    
+    footer{
+        text-align: center;
+        text-transform: capitalize;
+        padding-top: 50px;
+        font-size: 12px;
+        color: #4b4949;
+        padding-bottom: 10px;
+        background-color: rgb(0, 0, 0);
+    }
+   
+}
+@media only screen and (max-width: 600px) and (min-width: 1000px){
+    body{
+        background-color: black;
+        width: 100%;
+	    height: 100vh;
+    }
+    .sidebar{
+        width: 40%;
+        background: #141414;
+       box-shadow: 2px 2px 20px 0 rgba(255, 254, 254, 0.4);
+    }
+    .side-center{
+        float: left;
+        padding: 20px;
+        width: 60%;
+        background-color: #222222;
+        height:1300px; /* only for demonstration, should be removed */
+        
+        
+      }
+      
+      .dash{
+          width:100%;
+          margin-left: 15px;
+          display: inline-block;
+      }
+      .total-earn{
+        background-color: rgb(2, 2, 2);
+        width: 100%;
+        height: 84px;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 20px 0 rgba(112, 109, 109, 0.40);
+        margin-bottom: 10px;
+    }
+    section::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    .total-earn p:nth-child(1){
+        color: rgb(255, 255, 255);
+        text-transform: capitalize;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .total-earn p:nth-child(2){
+        text-transform: capitalize;
+        color: #b99806;
+        font-size: 16px;
+        font-weight: bold;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .referal-earnings{
+        background-color:rgb(3, 51, 95);
+        width: 100%;
+        height: 84px;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 20px 0 rgba(112, 109, 109, 0.40);
+        margin-bottom: 10px;
+    }
+    .referal-earnings p:nth-child(1){
+        color:rgb(255, 255, 255);
+        text-transform: capitalize;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .referal-earnings p:nth-child(2){
+      text-transform: capitalize;
+      color: #b99806;
+      font-size: 16px;
+      font-weight: bold;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .total-withdraw{
+        background-color: rgb(255, 255, 255);
+        width: 100%;
+        height: 84px;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 20px 0 rgba(112, 109, 109, 0.40);
+        margin-bottom: 10px;
+    }
+    .total-withdraw p:nth-child(1){
+        color:rgb(9, 140, 201);
+        text-transform: capitalize;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .total-deposit{
+        background-color: rgb(0, 0, 0);
+        width: 100%;
+        height: 84px;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 20px 0 rgba(112, 109, 109, 0.40);
+        margin-bottom: 10px;
+    }
+    .total-deposit p:nth-child(1){
+        color:rgb(255, 255, 255);
+        text-transform: capitalize;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .total-deposit p:nth-child(2){
+      text-transform: capitalize;
+      color: #b99806;
+      font-size: 16px;
+      font-weight: bold;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+    
+    .tradingview-widget-container{
+        margin-top: 80px;
+        width: 100%;
+        overflow: hidden;
+        height:40%;
+    }
+    .tabledash{
+        width: 50%;
+        margin-left:5px;
+        overflow: hidden;
+    }
+    .styled-table{
+    margin-left:2px;
+    width: 50%;
+    }
+    #myBtn1 {
+        margin-top: 50px;
+        text-align: center;
+        background-color: rgb(4, 118, 133);
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        border-radius: 10px;
+        margin-left: 25px;
+        cursor: pointer;
+        list-style: none;
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+        font-size: 16px;
+        text-transform: capitalize;
+        display: inline;
+    }
+    
+    /* withdraw button */
+    
+      #btn-withdraw{
+        margin-top: 50px;
+        text-align: center;
+        background-color: rgb(4, 118, 133);
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        border-radius: 10px;
+        margin-left: 25px;
+        cursor: pointer;
+        list-style: none;
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+        font-size: 16px;
+        text-transform: capitalize;
+        display: inline;
+    }
+    .btn-space{
+        display: inline-block;
+        margin-left: 50px;
+    }
+    .center{
+        display: flex;
+        flex-direction: row;
+        margin-top: 40px;
+        border:2px solid rgb(238, 232, 232);
+        height: 100px;
+        width: 100%;
+        margin-left: 10px;
+        padding-left:0px;
+    }
+    
+    footer{
+        text-align: center;
+        text-transform: capitalize;
+        padding-top: 50px;
+        font-size: 12px;
+        color: #4b4949;
+        padding-bottom: 10px;
+        background-color: rgb(0, 0, 0);
+    }  
+}

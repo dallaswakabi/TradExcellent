@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="table.css">
+</head>
+<body>
+    <!----  table content --->
+
+<div class="ta-content">
+    <table class="styled-table">
+<thead>
+    <tr>
+        <th>ID</th>
+        <th>firstname</th>
+        <th>lastname</th>
+        <th>username</th>
+        <th>email</th>
+    </tr>
+</thead>
+<tbody>
+     <%for(var i = 0;i<users.length;i++){%>
+        <tr>
+        <td><%=i+1%></td>
+        <td><%= users[i].firstname %></td>
+        <td><%= users[i].lastname %></td>
+        <td><%= users[i].username%></td>
+        <td><%= users[i].email %></td>
+    </tr>
+    <!-- and so on... -->
+    <%}%>
+</tbody>
+
+</table>          
+      </div>
+      
+</body>
+</html>

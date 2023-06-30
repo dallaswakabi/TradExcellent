@@ -1,0 +1,398 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deposit</title>
+    <link rel="stylesheet" href="deposit.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+
+
+        /* The Modal (background) */
+        .modal {
+          display: none; /* Hidden by default */
+          position: fixed; /* Stay in place */
+          z-index: 1; /* Sit on top */
+          padding-top: 100px; /* Location of the box */
+          right: 220;
+          top: 0;
+          width: 45%; /* Full width */
+          height: 100%; /* Full height */
+          overflow: auto; /* Enable scroll if needed */
+        }
+        
+        /* Modal Content */
+        .modal-content {
+          background-color: #fefefe;
+          margin: auto;
+          padding: 20px;
+          border: 1px solid #888;
+          width: 80%;
+        }
+        form p:nth-child(1){
+          padding-bottom: 15px;
+          text-transform: capitalize;
+          margin-left: 40px;
+          font-weight: bold;
+          font-size: 14px;
+        }
+        form p:nth-child(3){
+          padding-bottom: 15px;
+          text-transform: capitalize;
+          margin-left: 40px;
+          padding-top: 10px;
+          font-weight: bold;
+          font-size: 14px;
+        }
+        form p:nth-child(5){
+          padding-top: 15px;
+          padding-bottom: 15px;
+          text-transform: capitalize;
+          margin-left: 49px;
+          font-weight: bold;
+          font-size: 14px;
+        }
+        form p:nth-child(7){
+          padding-top: 15px;
+          padding-bottom: 15px;
+          text-transform: capitalize;
+          margin-left: 49px;
+          font-weight: bold;
+          font-size: 14px;
+        }
+       select{
+         margin-left: 40px;
+         padding: 5px;
+         text-transform: capitalize;
+       }
+        input{
+            margin-left: 40px;
+            padding: 5px;
+            border-radius: 5px;
+            width: 66%;
+        }
+        .btn-login{
+            margin-left: 120px;
+            padding:15px;
+            width: 150px;
+            background-color: rgb(107, 194, 252);
+            color: white;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            margin-top: 10px;
+            text-transform: capitalize;
+            font-weight: bold;
+        }
+        /* The Close Button */
+        .close {
+          color: #aaaaaa;
+          float: right;
+          font-size: 28px;
+          font-weight: bold;
+        }
+        
+        .close:hover,
+        .close:focus {
+          color: #000;
+          text-decoration: none;
+          cursor: pointer;
+        }
+        @media only screen and (max-width: 700px) and (min-width: 400px){
+               /* The Modal (background) */
+        .modal {
+          display: none; /* Hidden by default */
+          position: fixed; /* Stay in place */
+          z-index: 1; /* Sit on top */
+          padding-top: 100px; /* Location of the box */
+          right: 15;
+          top: 0;
+          width: 100%; /* Full width */
+          height: 100%; /* Full height */
+          overflow: auto; /* Enable scroll if needed */
+          
+        }
+        
+        /* Modal Content */
+        .modal-content {
+          background-color: #fefefe;
+          margin: auto;
+          padding: 20px;
+          border: 1px solid #888;
+          width: 80%;
+        }
+        form p:nth-child(1){
+              padding-bottom: 15px;
+              text-transform: capitalize;
+              margin-left: 40px;
+        }
+        form p:nth-child(3){
+              padding-top: 15px;
+              text-transform: capitalize;
+              margin-left: 40px;
+              padding-bottom: 10px;
+        }
+        form p:nth-child(5){
+              padding-top: 4px;
+              text-transform: capitalize;
+              margin-left: 40px;
+              font-size: 12px;
+              padding-bottom: 8px;
+              color: rgb(223, 0, 0);
+        }
+        form p:nth-child(6){
+              padding-bottom: 4px;
+              text-transform: capitalize;
+              margin-left: 40px;
+              font-size: 15px;
+              padding-bottom: 8px;
+              color: rgb(0, 0, 0);
+        }
+        input{
+            margin-left: 40px;
+            padding: 5px;
+            border-radius: 5px;
+            width: 80%;
+        }
+        /* The Close Button */
+        .close {
+          color: #aaaaaa;
+          float: right;
+          font-size: 28px;
+          font-weight: bold;
+        }
+        .btn-login{
+            margin-left: 160px;
+            padding:15px;
+            width: 150px;
+            background-color: rgb(107, 194, 252);
+            color: white;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        .close:hover,
+        .close:focus {
+          color: #000;
+          text-decoration: none;
+          cursor: pointer;
+        }
+        }
+        </style>
+</head>
+<body>
+    <header class="navbar">
+       <i class="fas fa-user-circle"></i>
+       <p><%=user%></p>
+       <a href="/dashboard"><img src="FINALLOGO.png"  alt="human"></a>
+       
+    </header>
+    <div class="container">
+        <nav class="sidebar">
+            <ul>
+                <li><a href="/profile">user profile</a></li>
+                <li><a href="/deposit">deposit</a></li>
+                <li><a href="/withdraw">withdraw</a></li>
+                <li><a href="/bonus">withdraw bonus</a></li>
+                <li><a href="/referals">referals</a></li>
+                <li><a href="/history">withdraw history</a></li>
+                <li><a href="/dp-history">deposit history</a></li>
+                <li><a href="/logout">logout</a></li>
+            </ul>
+        </nav>
+        
+        <article class="side-center">
+            <div class="dash">
+               <div class="depo-fund">
+                   <p> deposit fund</p>
+               </div>
+               <div class="depo-center">
+                <p>make your first deposit through any of the avalaible payment method</p>
+                </div>
+                <div class="box-container">
+                    <div class="box-1">
+                    <img src="bitcoin22.jpg" alt="paypal">
+                    </div>
+                    <button class="btn-title" id="myBtn1">choose this</button>
+                    
+                    
+                         
+                    <div id="myModal" class="modal">
+    
+                        <!-- Modal content -->
+                        <div class="modal-content">
+                          <span class="close">&times;</span>
+                          <div class="depo-fund">
+                          <p>deposit fund</p>
+                        </div>
+                        <div class="depo-center">
+                            <p>make deposit and start earning</p>
+                         </div>
+                         <form id="form"> 
+                            <p>currency</p>
+                            <select id="coin" name="type">
+                             <option class="coin1" selected>select coine type</option>
+                             <option value="bts" id="coin1">BTC</option>
+                            </select>
+                            <p>investment plan</p>
+                            <select id="package" name="package">
+                             <option value="package" class="pack">select you preferred package</option>
+                             <option value="plan 1 (min 50 - max 500) {10% after 10hrs}" class="pack">plan 1 (min 50 - max 500) {10% after 10hrs}</option>
+                             <option value="plan 2 (min 500 - max 10000) {15% after 8hrs}" class="pack">plan 2 (min 500 - max 10000) {15% after 8hrs}</option>
+                             <option value="plan 3 (min 1700 - max 100000) {35% after 7hrs} " class="pack">plan 3 (min 1700 - max 100000) {35% after 7hrs}</option>
+                             <option value="plan 4 (min 2700 - max 500000) {55% after 5hrs}" class="pack">plan 4 (min 2700 - max 500000) {55% after 5hrs}</option>
+                            </select>
+                            <p>username</p> 
+                     <input type="text"  placeholder="enter your username" id="username"  value="<%=user%>" name="username" required />
+                     <p>enter your amount</p>
+                            <input type="number" name="amount" id="amount" class="amount" value="1">
+                            <div class="deposit-btn1">
+                            <button class="btn-login" type="submit" name="submit">invest</button>
+                         
+                     </div>
+                        </form>
+                    </div>
+                </div>
+                <script>
+                    // Get the modal
+                    var modal = document.getElementById("myModal");
+                    
+                    // Get the button that opens the modal
+                    var btn = document.getElementById("myBtn1");
+                    var myBtn = document.getElementById("withdraw");
+                    // Get the <span> element that closes the modal
+                    var span = document.getElementsByClassName("close")[0];
+                    
+                    // When the user clicks the button, open the modal 
+                    btn.onclick = function() {
+                      modal.style.display = "block";
+                    }
+                    // When the user clicks on <span> (x), close the modal
+                    span.onclick = function() {
+                      modal.style.display = "none";
+                    }
+                    
+                    // When the user clicks anywhere outside of the modal, close it
+                    window.onclick = function(event) {
+                      if (event.target == modal) {
+                        modal.style.display = "none";
+                      }
+                    }
+                    </script>
+                </div>
+                
+                <div class="box-container">
+                    <div class="box-1">
+                    <img src="paypal.png" alt="paypal">
+                    </div>
+                    <button class="btn-title" id="myBtn2">choose this</button>
+                    </div>
+    
+                    <div class="box-container">
+                        <div class="box-1">
+                        <img src="venomos.png" alt="paypal">
+                        </div>
+                        <button class="btn-title" id="myBtn3">choose this</button>
+                        </div>
+    
+                        <div class="box-container">
+                            <div class="box-1">
+                            <img src="skrill22.png" alt="paypal">
+                            </div>
+                            <button class="btn-title" id="myBtn4">choose this</button>
+                            </div>
+                </div> 
+            </article>
+    
+</div>
+
+<script>
+     const depoerr = document.querySelector('.depoerr');
+    const form = document.querySelector('form');
+    form.addEventListener('submit',async (e)=>{
+       e.preventDefault();
+        const type = form.type.value;
+        const package = form.package.value;
+        const amount = form.amount.value
+        const username = form.username.value
+        if (amount>=50){
+            try{
+            const res =  await fetch('/deposit',{
+                method:'POST',
+                body: JSON.stringify({type,package,amount,username}),
+                headers:{'Content-Type':'application/json'}
+            });
+           const data = await res.json();
+            console.log(data);
+            if(data.errors){
+                depoerror.textcontent= data.errors.email;
+            }
+            if(data.user){
+                console.log('its happen');
+                Swal.fire({
+                icon: 'success',
+                title: 'Copy and send the exact Bitcoin Value to the provided address!',
+                html:'  <% users.forEach(function(student) { %><input type="text" value="<%=student.wallet%>"<% }); %>id="myInput"> ' + 
+                '<button onclick="myFunction()">Copy Wallet</button>'
+     })
+     
+
+            }
+       }catch(err){
+         console.log(err);
+       }
+       
+        }else{
+             
+            Swal.fire({
+                icon: 'error',
+                title: 'minimum...',
+                text: 'above 50 !'
+})
+        }
+    })
+
+    
+       
+</script>
+<script>
+    function myFunction() {
+      /* Get the text field */
+      var copyText = document.getElementById("myInput");
+    
+      /* Select the text field */
+      copyText.select();
+      copyText.setSelectionRange(0, 99999); /* For mobile devices */
+    
+      /* Copy the text inside the text field */
+      navigator.clipboard.writeText(copyText.value);
+      
+      /* Alert the copied text */
+      alert("Copied the Wallet: " + copyText.value);
+    }
+    </script>
+    <script>
+      document.getElementById('myBtn2').addEventListener('click',function(){
+        Swal.fire('This optiion is not available at the moment please select another!!')
+      })
+      document.getElementById('myBtn3').addEventListener('click',function(){
+        Swal.fire('This optiion is not available at the moment please select another!!')
+      })
+      document.getElementById('myBtn4').addEventListener('click',function(){
+        Swal.fire('This optiion is not available at the moment please select another!!')
+      })
+    </script>
+<footer>
+    <h5>copyright &copy;2021 & licended by snowlin</h5>
+    <h5>developed by ntuyenabo abdallah</h5>
+    
+</footer>
+<!--<script src="deposit.js"></script> 
+--->
+
+</body>
+</html>
+
+    

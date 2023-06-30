@@ -1,0 +1,209 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:#fff;
+}
+.navbar{
+   background-color:#ffffff;
+   box-shadow: 2px 2px 20px 0 rgba(0, 0, 0, 0.4);
+   position: relative;
+   height: 60px;
+}
+.navbar img{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+.sidebar{
+  float: left;
+  width: 250px;
+  height: 110vh; /* only for demonstration, should be removed */
+  background: #456fee;
+}
+.sidebar ul{
+    list-style: none;
+}
+.sidebar li{
+    margin-top: 30px;
+    cursor: pointer;
+    
+    font-size: 16px;
+    text-transform: capitalize;
+    padding-left:40px;
+}
+.sidebar a{
+    list-style: none;
+    text-decoration: none;
+    color: #e0dbdb;
+}
+.title-dash{
+    margin-top: 20px;
+    
+}
+.title-dash h2:nth-child(1){
+    text-transform: capitalize;
+    line-height: 2px;
+    letter-spacing: 2px;
+    color: rgb(2, 2, 2);
+    font-size: 20px;
+    
+}
+.side-center{
+  float: left;
+  padding: 20px;
+  width: 81%;
+  background-color: #f1f1f1;
+  height: 130px; /* only for demonstration, should be removed */
+}
+.side-center1{
+    float: left;
+    padding: 20px;
+    width: 81%;
+    background-color: #ffffff;
+    height: 130px; /* only for demonstration, should be removed */
+  }
+section::after {
+    content: "";
+    display: table;
+    clear: both;
+}  
+.depo-fund p{
+    color: #555353;
+    font-weight: bold;
+    text-transform: capitalize;
+    padding-top: 10px;
+    font-size: 19px;
+}
+.depo-fund1 p{
+    color: #555353;
+    text-transform: capitalize;
+    font-size: 15px;
+}
+.depo-fund2{
+color: #555353;
+text-transform: capitalize;
+font-size: 15px;
+margin-left: 20%;
+padding-bottom: 10px;
+}
+.depo-fund1 p:nth-child(2){
+    color: #555353;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 18px;
+}
+.home-trans a{
+    text-decoration: none;
+    color: rgb(53, 133, 207);
+    font-weight: bold;
+    text-transform: capitalize;
+}
+span{
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: bold;
+}
+.home-trans p{
+    padding-left: 20px;
+    padding-top: 13px;
+    color: #555353;
+}
+.home-trans{
+    margin-top: 10px;
+    background-color:#c2cdfa;
+    width: 98%;
+    height: 50px;
+    border-radius: 8px;
+}
+
+.high{
+    color: red;
+    padding-bottom: 20px;
+}
+.amount-table{
+    padding-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+.amount-btn{
+    
+    text-decoration: none;
+    text-transform: capitalize;
+    color: rgb(255, 255, 255);
+    background-color: rgb(57, 95, 197);
+    width: 125px;
+    height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    padding-top: 12px;
+    border-radius: 13px;
+}
+.amount-btn:hover{
+    background: #000;
+  transform: translateY(-3px);
+  transition: 0.5s;
+}
+input{
+    height: 30px;
+    width: 40%;
+    border-radius: 8px;
+    border-color: rgba(255, 0, 0, 0.26);
+}
+input:focus{
+    outline: none;
+    border-color:rgba(53, 133, 207,0.30);
+    border-radius: 8px;
+}
+table, th, td {
+    margin-left: 20%;
+  }
+  
+  th, td {
+    padding: 15px;
+  }
+  
+  th {
+    text-align: left;
+  }
+  
+  table {
+    border-spacing: 5px;
+}
+.btn{
+    margin-top: 35px;
+    text-align: center;
+    background-color: rgb(57, 95, 197);
+    width: 15%;
+    height: 34px;
+    padding: 5px;
+    border-radius: 8px;
+    margin-left: 50%;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+.btn a{
+    list-style: none;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: capitalize;
+}
+.btn:hover{
+    background: #000;
+  transform: translateY(-3px);
+  transition: 0.5s;
+}
+footer{
+    text-align: center;
+    text-transform: capitalize;
+    padding-top: 50px;
+    font-size: 12px;
+    color: #4b4949;
+    padding-bottom: 10px;
+    background-color: rgb(0, 0, 0);
+}

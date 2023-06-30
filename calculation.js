@@ -1,0 +1,4 @@
+// total balance 
+const balance = () =>{
+    
+}

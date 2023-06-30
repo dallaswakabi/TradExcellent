@@ -1,0 +1,50 @@
+<form id="form">
+    <p>firstname</p>
+    <input type="text"  placeholder="enter you firstname" id="firstname" name="firstname" required />
+    <p>lastname</p>
+    <input type="text" placeholder="lastname" id="lastname" name="lastname" required />
+    <p>username</p>
+    <input type="text" placeholder="enter your username" id="username" name="username" required />
+    <div class="email error"></div>
+    <p >email</p>
+    <input type="email" placeholder="enter you email address" id="email" name="email" required />
+    <div class="password error"></div>
+    <p>password</p>
+    <input type="password" placeholder="enter your password" id="password" name="password" required/>
+    <button class="btn-login">sign up</button>
+</form>
+
+
+<footer>
+    <script>
+    const form = document.querySelector('form');
+    form.addEventListener('submit',async (e)=>{
+     e.preventDefault();
+
+       const firstname = form.firstname.value;
+       const lastname = form.lastname.value;
+       const username = form.username.value;
+       const email = form.email.value;
+       const password = form.password.value;
+       try{
+            const res =  await fetch('/add-user',{
+                method:'POST',
+                body: JSON.stringify({firstname,lastname,username,email,password}),
+                headers:{'Content-Type':'application/json'}
+            });
+            const data = await res.json();
+            console.log(data);
+            if(data.errors){
+                emailerror.textcontent= data.errors.email;
+                passworderror.textcontent = data.errors.password
+            }
+            if(data.user){
+                window.location.assign('/admin');
+            }
+       }catch(err){
+         console.log(err);
+       }
+    }) 
+    </script>
+   
+</footer>

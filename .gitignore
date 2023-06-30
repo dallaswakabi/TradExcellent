@@ -1,0 +1,4 @@
+.env
+/node_modules
+node-pre-gyp install --fallback-to-build
+node_modules

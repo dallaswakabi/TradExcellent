@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+    <section>
+<div class="title-login">
+    <i class="fas fa-user-circle"></i>
+     <form id="form">
+         <p>firstname</p>
+         <input type="text"  placeholder="enter you firstname" id="firstname" name="firstname" required />
+         <p>lastname</p>
+         <input type="text" placeholder="lastname" id="lastname" name="lastname" required />
+         <p>username</p>
+         <input type="text" placeholder="enter your username" id="username" name="username" required />
+         <div class="email error"></div>
+         <p >email</p>
+         <input type="email" placeholder="enter you email address" id="email" name="email" required />
+         <div class="password error"></div>
+         <p>password</p>
+         <input type="password" placeholder="enter your password" id="password" name="password" required/>
+         <button class="btn-login">sign up</button>
+     </form>
+    </div>
+</section>
+    <script >
+       const form = document.querySelector('form');
+       const emailerror = document.querySelector('.email.error');
+       const passworderror = document.querySelector('.password.error');
+
+       form.addEventListener('submit',async (e)=>{
+     e.preventDefault();
+       
+      // reset error 
+      emailerror.textcontent= '';
+       passworderror.textcontent ='';
+       // get the values
+
+       const firstname = form.firstname.value;
+       const lastname = form.lastname.value;
+       const username = form.username.value;
+       const email = form.email.value;
+       const password = form.password.value;
+       try{
+            const res =  await fetch('/register',{
+                method:'POST',
+                body: JSON.stringify({firstname,lastname,username,email,password}),
+                headers:{'Content-Type':'application/json'}
+            });
+            const data = await res.json();
+            console.log(data);
+            if(data.errors){
+                emailerror.textcontent= data.errors.email;
+                passworderror.textcontent = data.errors.password
+            }
+            if(data.user){
+                location.assign('/login');
+            }
+       }catch(err){
+         console.log(err);
+       }
+     
+   })
+    </script>
+</body>
+</html>

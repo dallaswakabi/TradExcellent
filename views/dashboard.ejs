@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,600" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="table.css">
+</head>
+<script type="text/javascript">
+    var _smartsupp = _smartsupp || {};
+    _smartsupp.key = 'e3853e6e1d7ed42cb3cea7cac44d72fffc35ae02';
+    window.smartsupp||(function(d) {
+      var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+      s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+      c.type='text/javascript';c.charset='utf-8';c.async=true;
+      c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+    })(document);
+    </script>
+<body>
+    <script>
+       // var mainurl="http:localhost:300";
+     </script>
+    <header class="navbar">
+        <a href="/homepage"><!----<img src="../snowlin/img/human.jpg"  alt="human">--></a>
+    </header>
+    <style>
+        /* table style */
+.styled-table {
+    border-collapse: collapse;
+    margin-top: 10%;
+    margin-left: 130px;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 780px;
+    
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.styled-table thead tr {
+    background-color: #d60909;
+    color: #ffffff;
+    text-align: left;
+}
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+    
+    color: #ffffff;
+}
+
+</style>
+</head>
+
+    <div class="container">
+        <nav class="sidebar">
+            <ul>
+                
+                <li><a href="/profile">user profile</a></li>
+                <li><a href="/deposit" >deposit</a></li>
+                <li><a href="/withdraw">withdraw</a></li>
+                <li><a href="/referals">referals</a></li>
+                <li><a href="/logout" tite="Logout">logout</a></li>
+            </ul>
+        </nav>
+        
+    <article class="side-center">
+        <div class="title-dash">
+            <h2>dashboard</h2>
+        </div>
+        <div class="dash">
+            <div class="total-earn">
+                <p>total earnings</p>
+                <p >$0</p> 
+             </div>
+             <div class="referal-earnings">
+                 <p>referal earnings</p>
+                 <p>$0</p>
+             </div>
+             <div class="total-withdraw">
+                 <p>total withdraw</p>
+                 <p>$0</p>
+             </div>
+             <div class="total-deposit">
+                 <p>total deposit</p>
+                 <p>$0</p>
+             </div>
+             
+        </div>
+        <div class="btn-space">
+            <a href="/deposit"><button id="myBtn1">deposit</button></a>
+               </div>
+               <div class="btn-space">
+           <a href="/withdraw"><button id="btn-withdraw">withdraw</button></a>
+                   
+               </div>
+               
+           <div class="tabledash">
+           
+               <table class="styled-table">
+           <thead>
+               <tr>
+                   <th>Transaction ID</th>
+                   <th>Amount</th>
+                   <th>Earning</th>
+                   <th>Time</th>
+                   <th>Type</th>
+                   <th>Status</th>
+               </tr>
+           </thead>
+           <tbody>
+               <tr>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+               </tr>
+               <tr>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+               </tr>
+               <tr>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+               </tr>
+
+               <!-- and so on... -->
+           </tbody>
+           </table>          
+       </div>
+   
+   
+           <!-- TradingView Widget BEGIN -->
+   <div class="tradingview-widget-container">
+       <div id="tradingview_443a4"></div>
+       <div class="tradingview-widget-copyright"></div>
+       <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+       <script type="text/javascript">
+       new TradingView.widget(
+       {
+       "width": 980,
+       "height": 510,
+       "symbol": "NASDAQ:AAPL",
+       "interval": "D",
+       "timezone": "Etc/UTC",
+       "theme": "dark",
+       "style": "1",
+       "locale": "en",
+       "toolbar_bg": "#f1f3f6",
+       "enable_publishing": false,
+       "allow_symbol_change": true,
+       "container_id": "tradingview_443a4"
+     }
+       );
+       </script>
+     </div>
+     <!-- TradingView Widget END -->
+       </article>
+</div>
+
+
+<footer>
+   <h5>copyright &copy;2021 & licended by snowlin</h5>
+   <h5>developed by ntuyenabo abdallah</h5>
+   
+</footer>
+</body>
+</html>
+   

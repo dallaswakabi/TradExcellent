@@ -1,0 +1,208 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:#fff;
+}
+.navbar{
+   background-color:#ffffff;
+   box-shadow: 2px 2px 20px 0 rgba(0, 0, 0, 0.4);
+   position: relative;
+   height: 60px;
+}
+.navbar img{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+.sidebar{
+  float: left;
+  width: 250px;
+  height: 85vh; /* only for demonstration, should be removed */
+  background: #456fee;
+}
+.sidebar ul{
+    list-style: none;
+}
+.sidebar li{
+    margin-top: 30px;
+    cursor: pointer;
+    
+    font-size: 16px;
+    text-transform: capitalize;
+    padding-left:40px;
+}
+.sidebar a{
+    list-style: none;
+    text-decoration: none;
+    color: #e0dbdb;
+}
+.title-dash{
+    margin-top: 20px;
+    
+}
+.title-dash h2:nth-child(1){
+    text-transform: capitalize;
+    line-height: 2px;
+    letter-spacing: 2px;
+    color: rgb(2, 2, 2);
+    font-size: 20px;
+    
+}
+.side-center{
+  float: left;
+  padding: 20px;
+  width: 81%;
+  background-color: #f1f1f1;
+  height: 85vh; /* only for demonstration, should be removed */
+}
+section::after {
+    content: "";
+    display: table;
+    clear: both;
+}  
+.dash{
+ border: 2px solid #fff;
+ margin-top: 20px;
+ background-color: rgb(255, 255, 255);
+ height: 78vh;
+}
+.depo-fund{
+background: #f1f1f1;
+border-bottom: 1px solid #ccc9c9;
+height: 50px;
+}
+.depo-fund p{
+    color: #555353;
+    font-weight: bold;
+    text-transform: capitalize;
+    padding-left: 30px;
+    padding-top: 16px;
+    font-size: 19px;
+}
+
+.depo-center p:nth-child(1){
+   padding-left: 30px;
+   text-transform: capitalize;
+   padding-top: 16px;
+   color: #555353;
+   font-size: 21px;
+   font-weight: bold;
+   border-bottom:1px solid #ccc9c9;
+   padding-bottom: 10px;
+}
+.depo-center p:nth-child(2){
+    padding-left: 30px;
+    text-transform: capitalize;
+    padding-top: 16px;
+    color: #555353;
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom:1px solid #ccc9c9;
+    padding-bottom: 10px;
+ }
+form p{
+    font-size: 14px;
+    color: #868585;
+    font-weight: bold;
+    text-transform: capitalize;
+    padding-left: 35px;
+    padding-top: 25px;
+}
+.coin1{
+    text-transform: uppercase;
+}
+#coin1{
+    text-transform:uppercase;
+}
+#coin{
+    margin-top: 10px;
+    margin-left: 10px;
+    height: 39px;
+    width: 98%;
+    border-radius: 5px;
+    border-color: rgb(191, 212, 212);
+    text-transform: uppercase;
+    padding-left: 5px;
+}
+.depo-coin{
+    border-bottom:1px solid #ccc9c9;
+    padding-bottom: 10px;
+}
+#coin:focus{
+    background-color:#fff;
+    color: rgb(0, 0, 0);
+    outline: none;
+}
+.total-earn{
+    border-right:2px solid rgb(238, 232, 232);
+}
+.total-earn p:nth-child(1){
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-right: 40px;
+    text-transform: uppercase;
+    color: #f6c23e;
+}
+.referal-earnings p:nth-child(1){
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-right: 40px;
+    color: #f6c23e;
+}
+.referal-earnings{
+    border-right:2px solid rgb(238, 232, 232);
+    padding-right: 80px;
+}
+.total-withdraw p:nth-child(1){
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-right: 40px; 
+    color: #f6c23e;
+}
+.total-withdraw{
+    border-right:2px solid rgb(238, 232, 232);
+    padding-right: 50px;
+}
+.total-deposit p:nth-child(1){
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-right: 40px;
+    color: #f6c23e;
+}
+.total-deposit{
+    border-right:2px solid rgb(238, 232, 232);
+    padding-right: 50px;
+}
+.total p:nth-child(1){
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-right: 40px;
+    color: #f6c23e;
+    font-weight: bold;
+}
+.total{
+    padding-right: 10px;
+    border-right:2px solid rgb(238, 232, 232);
+}
+.balance{
+    padding-right: 50px;
+    padding-left: 20px;
+    padding-top: 10px; 
+    color: #f6c23e;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.center{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    border:2px solid #e3e6f0;
+    height: 50px;
+    width: 83%;
+    margin-left: 10px;
+    padding-left:0px;
+    background-color: #4e73df;
+}

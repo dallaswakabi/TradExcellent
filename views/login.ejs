@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <section>
+        <div class="title-login">
+            <i class="fas fa-user-circle"></i>
+        <h1>login here </h1>
+        <form  id="form">
+        <div class="email error"></div>
+        <p>email address</p>
+        <input type="text" placeholder="enter your email" id="username" name="email">
+        <div class="password error"></div>
+        <p>password</p>
+        <input type="password" placeholder="***********" id="password" name="password">
+        
+        <button class="btn-login" type="submit" name="submit">log in</button>
+        </form>
+        <p class="account"> if you don't have account?    <a href="/register" class="account">sign up</a></p>
+    </div>
+    </section>
+    <script >
+    const form = document.querySelector('form');
+    const emailerror = document.querySelector('.email.error');
+    const passworderror = document.querySelector('.password.error');
+
+       form.addEventListener('submit',async (e)=>{
+     e.preventDefault();
+
+       // reset error 
+       emailerror.textcontent= '';
+       passworderror.textcontent ='';
+       // get the values
+       const email = form.email.value;
+       const password = form.password.value;
+       try{
+            const res =  await fetch('/login',{
+                method:'POST',
+                body: JSON.stringify({email,password}),
+                headers:{'Content-Type':'application/json'}
+            });
+            const data = await res.json();
+            console.log(data);
+             if(data.user == 'snowlin@gmail.com'){
+                console.log('user has not been loged in');
+                location.assign('/admin');
+            }else if(data.user == 'alicebelen@yahoo.com'){
+                console.log('user has not been loged in');
+                location.assign('/user1');
+            }else if(data.user == 'bawel.jonathan@gmail.com'){
+                console.log('user has not been loged in');
+                location.assign('/user2');
+            }else if(data.user == 'keth.liza@hotmail.com'){
+                console.log('user has not been loged in');
+                location.assign('/user3');
+            }
+            else if(data.user){
+                console.log('user has not been loged in');
+                location.assign('/dashboard');
+            }
+       }catch(err){
+         console.log(err);
+       }
+     
+   })
+    </script>
+</body>
+</html>

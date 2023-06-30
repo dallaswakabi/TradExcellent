@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="popup.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,600" rel="stylesheet" type="text/css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"  >
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      * {box-sizing: border-box;}
+      body {font-family: Verdana, sans-serif;}
+      .mySlides {display: none;}
+      img { height:100vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position:relative;}
+      
+      /* Slideshow container */
+      .slideshow-container {
+        width: 100%;
+        position: relative;
+        margin: auto;
+        height:95vh;
+      }
+      
+      /* Caption text */
+      .text {
+        color: #f2f2f2;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+      }
+      
+      /* Number text (1/3 etc) */
+      .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+      }
+      
+      /* The dots/bullets/indicators */
+      .dot {
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+      }
+      
+      .active {
+        background-color: #717171;
+      }
+      
+      /* Fading animation */
+      .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+      
+      @-webkit-keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
+      }
+      
+      @keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
+      }
+      
+      /* On smaller screens, decrease text size */
+      @media only screen and (max-width: 300px) {
+        .text {font-size: 11px}
+      }
+      </style>
+
+</head>
+<body>
+  <script type="text/javascript">
+    var _smartsupp = _smartsupp || {};
+    _smartsupp.key = 'e3853e6e1d7ed42cb3cea7cac44d72fffc35ae02';
+    window.smartsupp||(function(d) {
+      var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+      s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+      c.type='text/javascript';c.charset='utf-8';c.async=true;
+      c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+    })(document);
+    </script>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .topnav {
+      overflow: hidden;
+      background-color: rgb(0, 0, 0);
+      
+    }
+    
+    .topnav a {
+      float: right;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 14px;
+       text-transform: capitalize;
+       margin-right: 20px;
+    }
+    
+    .topnav a:hover {
+      background-color: rgb(255, 255, 255);
+      color: rgb(0, 0, 0);
+    }
+    
+    .topnav a.active {
+      background-color: rgb(19, 20, 20);
+      color: white;
+    }
+    
+    .topnav .icon {
+      display: none;
+    }
+    
+    @media screen and (max-width: 600px) {
+      .topnav a:not(:first-child) {display: none;}
+      .topnav a.icon {
+        float: right;
+        display: block;
+      }
+    }
+    
+    @media screen and (max-width: 600px) {
+      .topnav.responsive {position: relative;}
+      .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+      }
+    }
+    </style>
+    </head>
+    <body>
+    
+    <div class="topnav" id="myTopnav">
+      <a href="/" class="active">Home</a>
+      <a href="/dashboard">dashboard</a>
+      <a href="/register">register</a>
+      <a href="/about">About Us</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+    
+    <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+    </script>
+    
+    <div class="slideshow-container">
+   
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="  GettyImages.jpg" style="width:100%">
+        <div class="text"></div>
+      </div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="chair.jpg" style="width:100%">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="slide-2.png" style="width:100%">
+  <div class="text"></div>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+<div></div>
+    <section class="title1">
+        <div class="title">
+            <p>Your investment </p>
+              <p>   is safe with us.</p>
+            <p>We operate using the highest security standards</p>
+            <p>so you can have peace of mind.</p>
+            <a href="/login"class="btn">get started</a>
+        </div>
+        <section class="custom-social-proof">
+          <div class="custom-notification">
+            <div class="custom-notification-container">
+              <div class="custom-notification-image-wrapper">
+                <img id="map1" src="https://wiki.openstreetmap.org/w/images/d/d1/Tile_osm-no-label.png" style="width: 50px; height: 50px">
+              </div>
+              <div class="custom-notification-content-wrapper">
+                <p id="earn">Deposit</p>
+                <P class class="custom-notification-content">
+                  <span id="country">jackson from BOLIVIA</span><br>has just invested <span id="product"> $16895</span>
+                  <small>
+                  
+                    <span id="time">36</span> minutes ago &nbsp; 
+                    <i class="fa fa-check-circle"></i> Verified by <a class="poweredby" href="/" target="_blank">Tradexcellent</a>
+                  </small>
+                </P>
+              </div>
+            </div>
+            <div class="custom-close"></div>
+          </div>
+        </section>
+      </div>
+        <!---  start of slideshow    --->
+        <script>
+          var slideIndex = 0;
+          showSlides();
+          
+          function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+            setTimeout(showSlides, 5000); // Change image every 2 seconds
+          }
+          </script>
+          
+
+
+
+        <!--- end of slideshow     --->
+
+      <!----   navbar      -->
+               
+      <script>
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+        </script>
+      
+   
+      <!---- end of navbar      -->
+
+
+
+    <!----  social proof  ---->
+
+
+  <script>
+    var r_text = new Array ();
+    r_text[0] = "Jackson from BOLIVIA";
+    r_text[1] = "Lucas from UAE";
+    r_text[2] = "Amelia from FROLIDA";
+    r_text[3] = "John from MEXICO";
+    r_text[5] = "Mohammed from INDIA";
+    r_text[4] = "William from SEYCHELLE";
+    r_text[6] = "Watkin from MALDIVESH";
+    r_text[7] = "Ahmed from SWEDEN";
+    r_text[8] = "Mohammed from BANGLADESH";
+    r_text[9] = "John from UNITED KINDOM";
+
+
+    var r_map = new Array ();
+    r_map[0] = "https://s3.amazonaws.com/provely-public/images/maps/02a342794409deaf5f29216201d9da30.jpg";
+    r_map[1] = "https://s3.amazonaws.com/provely-public/images/maps/359f4e0ae29d7fb7af480e4e87ced439.jpg";
+    r_map[2] = "https://s3.amazonaws.com/provely-public/images/maps/4b2aee97b83b39dd44d9be1041e06a83.jpg";
+    r_map[4] = "https://s3.amazonaws.com/provely-public/images/maps/2211ef3aabad24eb566b23da26669662.jpg";
+    r_map[5] = "https://s3.amazonaws.com/provely-public/images/maps/3d147c6ba113929f5a004a5e9dcc832e.jpg";
+    r_map[6] = "https://s3.amazonaws.com/provely-public/images/maps/e10212e09e6eb3b49d00e046870445af.jpg";
+
+ 
+var r_product = new Array ();
+r_product[0] = "$16895";
+r_product[1] = "$17820";
+r_product[2] = "$24945";
+r_product[3] = "$12252";
+r_product[4] = "$13589";
+r_product[5] = "$27220";
+r_product[6] = "$18361";
+r_product[7] = "$16895";
+r_product[8] = "$24356";
+r_product[9] = "$20845";
+     setInterval(function(){ $(".custom-social-proof").stop().slideToggle('slow'); }, 3000);
+      $(".custom-close").click(function() {
+        $(".custom-social-proof").stop().slideToggle('slow');
+      });
+        setInterval(function(){    
+        	var myNumber = Math.floor(7*Math.random());
+        	$("#map1").attr("src",r_map[myNumber]);
+ 			$('#country').text(r_text[myNumber]);
+
+          	$('#product').text(r_product[Math.floor(7*Math.random())]);
+ 			var timeVal = Math.floor(7*Math.random());
+ 	
+ 			$('#time').text(timeVal);
+ 		
+ 		 
+     //console.log(timeVal); 
+ }, 6000);
+  </script>
+  <!-----  end of social proof   ---->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </section>
+    
+</body>
+</html>
