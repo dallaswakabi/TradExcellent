@@ -204,12 +204,15 @@ app.get('/view',requireAuth,(req,res)=>{
         
        })
    })
- app.get('/deposit',requireAuth,(req,res)=>{
+ app.get('/deposit',requireAuth,async(req,res)=>{
        const token = req.cookies.jwt;
     const user =  jwt.verify(token,process.env.TOKEN_SECRET)
     const email = user.email;
-
-    wallets.find({},function(err,doc){
+  
+     const all_warrets  = await wallets.find()
+      const data = await User.findOne({email})
+      res.render('deposit',{user:data.username,users:all_warrets})
+    /*wallets.find({},function(err,doc){
       User.find({email},function(err,data){
       console.log(data);
        data.forEach(function(obj) {
@@ -218,18 +221,24 @@ app.get('/view',requireAuth,(req,res)=>{
     })
      
     })
+    */
  })
-app.get('/dashboard',requireAuth,(req,res)=>{
+app.get('/dashboard',requireAuth,async(req,res)=>{
        const token = req.cookies.jwt;
       const user =  jwt.verify(token,process.env.TOKEN_SECRET)
       const email = user.email;
    
-      User.find({email},function(err,data){
+      const data = await User.findOne({email}).populate("email").select("-password")
+        console.log(data)
+          res.render('dashboard',{user:data.username})
+         
+     /* User.find({email},function(err,data){
       console.log(data);
       data.forEach(function(obj) {
        res.render('dashboard',{user:obj.username});
        })
     }) 
+    */
             
 })
 app.use(authroute);

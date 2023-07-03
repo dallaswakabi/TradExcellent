@@ -128,10 +128,14 @@ module.exports.login_post = async (req,res) =>{
      const {email,password} = req.body;
 
      try{
-          const user = await User.login(email,password);
-          const token = createToken(user.email);
+          const checkEmail = await User.findOne({email})
+          if(!checkEmail) return res.status(400).json({message:'Email does not exist'})
+            const passwordCompare = await bcrypt.compare(password,checkEmail.password)
+            if(!passwordCompare) return res.status(400).json({message:'password does not match'})
+            
+          const token = createToken(checkEmail.email);
           res.cookie('jwt',token,{httpOnly:true,maxAge:maxAge * 1000});
-          res.status(200).json({user:user.email});
+          res.status(200).json({user:checkEmail.email});
      }
      catch(err){
           const errors = handleErrors(err);

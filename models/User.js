@@ -44,7 +44,7 @@ const user = new mongoose.Schema({
   });
      
    // static method to login
-     user.statics.login = async function(email,password){
+    /* user.statics.login = async function(email,password){
          const user = await this.findOne({email});
          if(user){
              const auth = await bcrypt.compare(password,user.password);
@@ -56,5 +56,6 @@ const user = new mongoose.Schema({
          }
          throw Error('incorrect email');
      }
+     */
   const User = mongoose.model('user',user);
   module.exports = User
